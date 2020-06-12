@@ -33,6 +33,8 @@ class action_plugin_sendhtml extends DokuWiki_Action_Plugin{
         $mail->subject(p_get_first_heading($ID));
 
 		$html = p_wiki_xhtml($ID);
+        $html = preg_replace('#<a.*?>(.*?)</a>#is', '\1', $html); # strip links (but leave link text)
+        $html = preg_replace("/<img[^>]+\>/i", "", $html);        # strip images
                 
 		$mail->setBody("",null,null,$html);
 		
