@@ -9,7 +9,7 @@ if(!defined('DOKU_INC')) die();
  * @license  MIT
  * @author   Gero Gothe
  */
-class syntax_plugin_sendpagecontent extends DokuWiki_Syntax_Plugin {
+class syntax_plugin_sendhtml extends DokuWiki_Syntax_Plugin {
 
     
     public function getType() {
@@ -29,7 +29,7 @@ class syntax_plugin_sendpagecontent extends DokuWiki_Syntax_Plugin {
      * @param string $mode
      */
     public function connectTo($mode) {
-        $this->Lexer->addSpecialPattern('\{\{MAIL:[^\}]*\}\}', $mode, 'plugin_sendpagecontent');
+        $this->Lexer->addSpecialPattern('\{\{MAIL:[^\}]*\}\}', $mode, 'plugin_sendhtml');
     }
 
     /**
@@ -59,11 +59,11 @@ class syntax_plugin_sendpagecontent extends DokuWiki_Syntax_Plugin {
         
         if($mode == 'xhtml') {
             
-            $link = DOKU_URL . "doku.php?id=$ID&sendpagecontent=" . $data[0];
+            $link = DOKU_URL . "doku.php?id=$ID&sendhtml=" . $data[0];
             $label = $data[0];
             if (isset($data[1])) $label = $data[1];
             
-            $renderer->doc .= "<a href='$link' style='border:1px solid lightsteelblue;padding:3px;margin:1em;display:inline-block' >Mail an: $label</a>";
+            $renderer->doc .= "<a href='$link' class='plugin__sendhtml_link'>Mail an: $label</a>";
             
             
             return true;
