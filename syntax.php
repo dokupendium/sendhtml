@@ -23,7 +23,7 @@ class syntax_plugin_sendhtml extends DokuWiki_Syntax_Plugin {
         return 'block';
     }
 
-    
+    function getSort() { return 136; }
 
     /**
      * @param string $mode

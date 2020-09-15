@@ -1,7 +1,7 @@
 base   sendhtml
 author Gero Gothe
 email  practical@medizin-lernen.de
-date   2020-06-12
+date   2020-09-15
 name   sendhtml
 desc   Send (rendered) DokuWiki-Page per E-Mail
 url    https://github.com/practical-solutions/sendhtml

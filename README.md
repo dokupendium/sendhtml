@@ -20,3 +20,9 @@ Examples:
 {{MAIL:test@domain.com}}
 {{MAIL:test@domain.com,The label}}
 ```
+
+## Compatibility
+
+Tested with
+* DokuWiki/**Hogfather**
+* Tested with **PHP 7.3**
