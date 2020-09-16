@@ -25,4 +25,4 @@ Examples:
 
 Tested with
 * DokuWiki/**Hogfather**
-* Tested with **PHP 7.3**
+* **PHP 7.3**
